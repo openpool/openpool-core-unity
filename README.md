@@ -12,3 +12,7 @@ OpenPool core module for kinect 2 & Sample Effect powered by Unity platform
 # UnityModule
 - This is the sample effect program created using Unity.
 - This does not require Pro version of Unity (Standard version is enough to build).
+
+
+# License
+Each module has its own license. Please check each project directory.

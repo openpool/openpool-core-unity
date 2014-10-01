@@ -8,3 +8,6 @@ OpenPool core module for kinect 2
 
 # oscpack
 - dependency library to handle OSC
+
+# License
+- GPL ver3. See [LICENSE.md](LICENSE.md)
