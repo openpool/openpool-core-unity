@@ -1,0 +1,213 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{D35DC68F-0BB1-4FA9-803D-CAA3DA23E59F}</ProjectGuid>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <Keyword>ManagedCProj</Keyword>
+    <RootNamespace>OpenPoolCoreGUI</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v110</PlatformToolset>
+    <CLRSupport>true</CLRSupport>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v110</PlatformToolset>
+    <CLRSupport>true</CLRSupport>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v110</PlatformToolset>
+    <CLRSupport>true</CLRSupport>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v110</PlatformToolset>
+    <CLRSupport>true</CLRSupport>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <LibraryPath>$(KINECTSDK20_DIR)\lib\x86;$(LibraryPath)</LibraryPath>
+    <IncludePath>$(KINECTSDK20_DIR)inc;$(IncludePath);c:\opencv\build\include;$(SolutionDir)\include;$(SolutionDir)\..\oscpack</IncludePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+    <LibraryPath>$(KINECTSDK20_DIR)\lib\x64;$(LibraryPath)</LibraryPath>
+    <IncludePath>$(KINECTSDK20_DIR)inc;$(IncludePath);c:\opencv\build\include;$(SolutionDir)\include;$(SolutionDir)\..\oscpack;$(KINECTSDK10_DIR)\inc;C:\opencv\include;c:\opencv\modules\core\include;c:\opencv\modules\highgui\include;c:\opencv\modules\calib3d\include;c:\opencv\modules\contrib\include;c:\opencv\modules\features2d\include;c:\opencv\modules\flann\include;c:\opencv\modules\imgproc\include;c:\opencv\modules\objdetect\include;c:\opencv\modules\photo\include;c:\opencv\modules\video\include;c:\opencv\modules\ml\include</IncludePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+    <LibraryPath>$(KINECTSDK20_DIR)\lib\x86;$(LibraryPath)</LibraryPath>
+    <IncludePath>$(KINECTSDK20_DIR)inc;$(IncludePath);c:\opencv\build\include;$(SolutionDir)\include;$(SolutionDir)\..\oscpack</IncludePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+    <LibraryPath>$(KINECTSDK20_DIR)\lib\x64;$(LibraryPath)</LibraryPath>
+    <IncludePath>$(KINECTSDK20_DIR)inc;$(IncludePath);c:\opencv\build\include;$(SolutionDir)\include;$(SolutionDir)\..\oscpack;$(KINECTSDK10_DIR)\inc;C:\opencv\include;c:\opencv\modules\core\include;c:\opencv\modules\highgui\include;c:\opencv\modules\calib3d\include;c:\opencv\modules\contrib\include;c:\opencv\modules\features2d\include;c:\opencv\modules\flann\include;c:\opencv\modules\imgproc\include;c:\opencv\modules\objdetect\include;c:\opencv\modules\photo\include;c:\opencv\modules\video\include;c:\opencv\modules\ml\include</IncludePath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(SolutionDir)\include;$(SolutionDir)\..\oscpack;$(KINECTSDK20_DIR)\inc</AdditionalIncludeDirectories>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <EntryPointSymbol>main</EntryPointSymbol>
+      <AdditionalDependencies>kinect20.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(SolutionDir)$(Configuration)\</AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(SolutionDir)\include;C:\Program Files\Microsoft SDKs\Kinect\v2.0-DevPreview1311\inc;$(SolutionDir)\..\oscpack;$(KINECTSDK10_DIR)\inc;C:\opencv\include;c:\opencv\modules\core\include;c:\opencv\modules\highgui\include;c:\opencv\modules\calib3d\include;c:\opencv\modules\contrib\include;c:\opencv\modules\features2d\include;c:\opencv\modules\flann\include;c:\opencv\modules\imgproc\include;c:\opencv\modules\objdetect\include;c:\opencv\modules\photo\include;c:\opencv\modules\video\include;c:\opencv\modules\ml\include</AdditionalIncludeDirectories>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <EntryPointSymbol>main</EntryPointSymbol>
+      <AdditionalDependencies>kinect20.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(SolutionDir)$(Platform)\$(Configuration)\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(SolutionDir)\include;$(SolutionDir)\..\oscpack;$(KINECTSDK20_DIR)\inc</AdditionalIncludeDirectories>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <EntryPointSymbol>main</EntryPointSymbol>
+      <AdditionalDependencies>kinect20.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(SolutionDir)$(Configuration)\</AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(SolutionDir)\include;C:\Program Files\Microsoft SDKs\Kinect\v2.0-DevPreview1311\inc;$(SolutionDir)\..\oscpack;$(KINECTSDK10_DIR)\inc;C:\opencv\include;c:\opencv\modules\core\include;c:\opencv\modules\highgui\include;c:\opencv\modules\calib3d\include;c:\opencv\modules\contrib\include;c:\opencv\modules\features2d\include;c:\opencv\modules\flann\include;c:\opencv\modules\imgproc\include;c:\opencv\modules\objdetect\include;c:\opencv\modules\photo\include;c:\opencv\modules\video\include;c:\opencv\modules\ml\include</AdditionalIncludeDirectories>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <EntryPointSymbol>main</EntryPointSymbol>
+      <AdditionalDependencies>kinect20.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(SolutionDir)$(Platform)\$(Configuration)\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="HelpForm.cpp" />
+    <ClCompile Include="MyForm.cpp" />
+    <ClCompile Include="MyForm_unmanaged.cpp" />
+    <ClCompile Include="TargetSetup.cpp" />
+    <ClCompile Include="WinCLI.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="AppConfig.h" />
+    <ClInclude Include="cvRectManagedWrapper.h" />
+    <ClInclude Include="HelpForm.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="MyForm.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="MyForm_unmanaged.h" />
+    <ClInclude Include="cvMatManagedWrapper.h" />
+    <ClInclude Include="resource.h" />
+    <ClInclude Include="targetsetup.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="XmlConfig.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="HelpForm.resx">
+      <DependentUpon>HelpForm.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MyForm.resx">
+      <DependentUpon>MyForm.h</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="targetsetup.resx">
+      <DependentUpon>targetsetup.h</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="resources\harryball.ico" />
+    <Image Include="resources\harryball.png" />
+    <Image Include="resources\logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="OpenPoolCoreGUI.rc" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+  <ProjectExtensions>
+    <VisualStudio>
+      <UserProperties RESOURCE_FILE="OpenPoolCoreGUI.rc" />
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

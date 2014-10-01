@@ -1,0 +1,31 @@
+{"frames": {
+	"bottom.png":{
+		"rotated": false,"trimmed": true,
+		"frame": {"x":0,"y":0,"w":2048,"h":139},
+		"spriteSourceSize": {"x":0,"y":0,"w":2048,"h":139},
+		"sourceSize": {"w":2048,"h":139}
+	},
+	"left.png":{
+		"rotated": false,"trimmed": true,
+		"frame": {"x":969,"y":257,"w":948,"h":145},
+		"spriteSourceSize": {"x":0,"y":0,"w":948,"h":145},
+		"sourceSize": {"w":948,"h":145}
+	},
+	"right.png":{
+		"rotated": false,"trimmed": true,
+		"frame": {"x":0,"y":257,"w":969,"h":147},
+		"spriteSourceSize": {"x":0,"y":0,"w":969,"h":147},
+		"sourceSize": {"w":969,"h":147}
+	},
+	"top.png":{
+		"rotated": false,"trimmed": true,
+		"frame": {"x":0,"y":139,"w":1779,"h":118},
+		"spriteSourceSize": {"x":0,"y":0,"w":1779,"h":118},
+		"sourceSize": {"w":1779,"h":118}
+	}
+},
+"meta": {
+	"app": "ShoeBox",
+	"size": {"w":2048,"h":512}
+}
+}
