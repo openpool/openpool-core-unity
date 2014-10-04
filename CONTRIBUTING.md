@@ -53,5 +53,5 @@ $ git push origin FEATUREBRANCH
 
 Go to https://github.com/YOURNAME/openpool-core-unity and select your topic branch.
 Click the 'Pull Request' button, select "devel" as a base branch and fill out the form.
-Note that you need issue numbers in the comment.
+Note that you need issue numbers in the comment. (see https://help.github.com/articles/closing-issues-via-commit-messages/)
 
