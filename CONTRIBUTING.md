@@ -3,6 +3,11 @@
 OpenPool project welcomes new contributors.  This document will guide you
 through the process.
 
+### OPEN ISSUES
+We strongly recommend issue-driven contribution.  
+please make sure that issues related to your contribution are open in the [issues](https://github.com/openpool/openpool-core-unity/issues) before sending us pull requests.
+If not, please open the issue for your contribution.
+
 ### FORK
 
 Fork the project [on GitHub](https://github.com/openpool/openpool-core-unity)
@@ -44,6 +49,9 @@ $ git commit -m "short comment"
 $ git push origin FEATUREBRANCH
 ```
 
+### PULL REQUEST
+
 Go to https://github.com/YOURNAME/openpool-core-unity and select your topic branch.
 Click the 'Pull Request' button, select "devel" as a base branch and fill out the form.
+Note that you need issue numbers in the comment.
 
