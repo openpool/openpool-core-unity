@@ -78,7 +78,7 @@ using namespace std;
     throw std::runtime_error( ss.str().c_str() );               \
     }
 
-int CoreEngine(cv::Mat, cv::Mat, cv::Mat, cv::Mat,
+int CoreEngine(cv::Mat, cv::Mat, cv::Mat,
                int, int, int, int, int, int ,int, std::vector< cv::Rect >,
 			   UdpTransmitSocket *);
 

@@ -175,8 +175,6 @@ void KinectInstance::drawDepthImage( cv::Mat& image )
             hr = pDepthFrame->AccessUnderlyingBuffer(&nBufferSize, &pBuffer);            
         }
 
-		//image = cv::Mat( DEPTHHEIGHT, DEPTHWIDTH, CV_16UC1, pBuffer);
-
         if (SUCCEEDED(hr))
         {
             ProcessDepth(nTime, pBuffer, nWidth, nHeight, nDepthMinReliableDistance, nDepthMaxReliableDistance, image);
@@ -230,7 +228,7 @@ void KinectInstance::ProcessDepth(INT64 nTime, const UINT16* pBuffer, int nWidth
 
 			// Note: Using conditionals in this loop could degrade performance.
 			// Consider using a lookup table instead when writing production code.
-        BYTE intensity = static_cast<BYTE>((depth >= nMinDepth) && (depth <= nMaxDepth) ? ((depth-nMinDepth)*((double)256/(double)(nMaxDepth-nMinDepth))) : 0);
+	        BYTE intensity = static_cast<BYTE>((depth >= nMinDepth) && (depth <= nMaxDepth) ? ((depth-nMinDepth)*((double)256/(double)(nMaxDepth-nMinDepth))) : 0);
 
             int x = (count%DEPTHWIDTH);
             int y = (count/DEPTHWIDTH);
@@ -315,7 +313,6 @@ void KinectManager::KinectManagerThread(System::Object^ param)
 
 		whiteImg8 = cv::Scalar(255);	
 
-        cv::Mat backgroundVideoImg = cv::Mat( DEPTHHEIGHT, DEPTHWIDTH, CV_8UC1);
         cv::Mat diffVideoImg       = cv::Mat( DEPTHHEIGHT, DEPTHWIDTH, CV_8UC1);              
         cv::Mat outputVideoImg     = cv::Mat( DEPTHHEIGHT, DEPTHWIDTH, CV_8UC4);        
 
@@ -326,7 +323,6 @@ void KinectManager::KinectManagerThread(System::Object^ param)
 
 		while(1)
 		{
-            //kinect0
 			WaitForSingleObject(imgmtx0, INFINITE);
 			kinect.retrieveDepthImage(image0);
             cv::flip(image0,image0,1);
@@ -360,8 +356,7 @@ void KinectManager::KinectManagerThread(System::Object^ param)
 			rectForCombinedImageWindow = formInstance->getIgnoreRects();
 
             //combineImage
-            CoreEngine(resizedImage,//imageCombined8,
-            backgroundVideoImg,
+            CoreEngine(resizedImage,
             diffVideoImg,
             outputVideoImg,
             formInstance->getThreshNear(),
@@ -424,7 +419,6 @@ void resizeImage(cv::Mat& imagein, cv::Mat& imageout, cv::Rect rect)
 
 
 int CoreEngine(cv::Mat videoImg8,
-               cv::Mat backgroundVideoImg,
                cv::Mat diffVideoImg,
                cv::Mat outputVideoImg,
                int binalization_threshold_near,
@@ -457,12 +451,9 @@ int CoreEngine(cv::Mat videoImg8,
     //clear outputVideoImg
     outputVideoImg = cv::Scalar(0,0,0,0);
 
-    // diff	
-    cv::absdiff(videoImg8, backgroundVideoImg, diffVideoImg);
-
     //binalization
-    cv::threshold(diffVideoImg,tempVideoImg1,binalization_threshold_near,255,CV_THRESH_BINARY);
-    cv::threshold(diffVideoImg,tempVideoImg2,binalization_threshold_far ,255,CV_THRESH_BINARY_INV);
+    cv::threshold(videoImg8,tempVideoImg1,binalization_threshold_near,255,CV_THRESH_BINARY);
+    cv::threshold(videoImg8,tempVideoImg2,binalization_threshold_far ,255,CV_THRESH_BINARY_INV);
 
     //And
     cv::bitwise_and(tempVideoImg1,tempVideoImg2,tempVideoImg1);
