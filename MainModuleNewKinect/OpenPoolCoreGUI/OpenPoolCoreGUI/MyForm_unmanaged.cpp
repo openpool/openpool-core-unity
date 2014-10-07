@@ -38,7 +38,6 @@ KinectInstance::KinectInstance() :
 
 KinectInstance::~KinectInstance()
 {
-	// 終了処理
 	if ( m_pKinectSensor)
 	{
         m_pKinectSensor->Close();
@@ -98,7 +97,7 @@ void KinectInstance::run()
 
 	SetEvent(imgReadyEvent);
 
-	// メインループ
+	// main loop
 	while ( 1 )
 	{
 		try
@@ -115,7 +114,7 @@ void KinectInstance::run()
 	}
 }
 
-// Kinectの状態が変わった時に呼ばれるコールバック関数(クラス関数)
+// Callback for change of Kinect status
 void CALLBACK KinectInstance::StatusChanged( HRESULT hrStatus,
 											const OLECHAR* instanceName, const OLECHAR* uniqueDeviceName, void* pUserData )
 {

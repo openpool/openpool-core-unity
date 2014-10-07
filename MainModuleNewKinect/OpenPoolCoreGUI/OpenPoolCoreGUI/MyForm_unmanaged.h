@@ -128,7 +128,6 @@ public:
     double getFPS();
 
 private:
-    // Kinectの状態が変わった時に呼ばれるコールバック関数(クラス関数)
     static void CALLBACK StatusChanged( HRESULT, const OLECHAR*, const OLECHAR*, void* );
 
     void createInstance( int );
