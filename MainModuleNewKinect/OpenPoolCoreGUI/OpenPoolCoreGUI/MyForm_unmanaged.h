@@ -78,7 +78,7 @@ using namespace std;
     throw std::runtime_error( ss.str().c_str() );               \
     }
 
-int CoreEngine(cv::Mat, cv::Mat, cv::Mat, cv::Mat,
+int CoreEngine(cv::Mat, cv::Mat, cv::Mat,
                int, int, int, int, int, int ,int, std::vector< cv::Rect >,
 			   UdpTransmitSocket *);
 
@@ -128,7 +128,6 @@ public:
     double getFPS();
 
 private:
-    // Kinectの状態が変わった時に呼ばれるコールバック関数(クラス関数)
     static void CALLBACK StatusChanged( HRESULT, const OLECHAR*, const OLECHAR*, void* );
 
     void createInstance( int );
